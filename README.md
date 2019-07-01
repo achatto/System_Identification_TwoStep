@@ -11,7 +11,7 @@ Refer to the instructions mentioned in the comments of the above file.
 Data Files : 
 
 *simdata2018 > da3211.m, dadoublet.m, de3211.m, dr3211.m, drdoublet.m*
-Data files that were provided with the assignment. Containg flight test data for various manoeuvre.
+Data files that were provided with the assignment. Contain flight test data for various manoeuvres.
 
 Functions:
 
