@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Iterated sExtended Kalman Filter
+% Iterated Extended Kalman Filter
 
 % AE4320 Assignment
 % Abhishek Chatterjee (4743075)

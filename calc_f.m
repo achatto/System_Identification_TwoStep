@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% State transition functions
 % X = [xs; ys; zs; us; vs; ws; phis; thetas; psis; Wxs; Wys; Wzs; l_Axs; l_Ays; l_Azs; l_ps; l_qs; l_rs]
 % u = [Axm]
 function X_dot = calc_f(X, U)

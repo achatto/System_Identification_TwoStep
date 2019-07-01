@@ -1,9 +1,18 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Runge Kutta Integrator
 function [w] = integration_rk4(fn, xin, uin, t)
     g = 9.81; 
     a = t(1); 
     b = t(2);
     w = xin;
-    N = 2;
+    N = 1;
     h = (b-a) / N;
     t = a;
 

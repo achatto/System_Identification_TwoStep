@@ -7,9 +7,9 @@
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Function to estimate parameters
+%% Function to estimate the parameters for the alternate model
 
-function [param, err, err_mean, err_var, param_cov, R2] = param_est(C_i, S_i, flag)
+function [param, err, err_mean, err_var, param_cov, R2] = param_est_alternate(C_i, S_i, flag)
 
 % flag = 1 Cx parameter identification
 % flag = 2 Cz parameter identification
@@ -24,22 +24,22 @@ function [param, err, err_mean, err_var, param_cov, R2] = param_est(C_i, S_i, fl
     
     if(flag == 1)  % if Cx parameters have to be identified
         y = C_i(1, :)';
-        A = [ones(size(y)), S_i(1, :)', S_i(2, :)', S_i(3, :)', S_i(4, :)', S_i(5, :)'];
+        A = [ones(size(y)), S_i(1, :)', S_i(2, :)', S_i(4, :)'];
     elseif(flag == 2) % if Cz parameters have to be identified
         y = C_i(3, :)';
-        A = [ones(size(y)), S_i(1, :)', S_i(3, :)', S_i(4, :)', S_i(5, :)'];
+        A = [ones(size(y)), S_i(1, :)', S_i(4, :)'];
     elseif(flag == 3) % if Cm parameters have to be identified
         y = C_i(5, :)';
-        A = [ones(size(y)), S_i(1, :)', S_i(3, :)', S_i(4, :)', S_i(5, :)'];
+        A = [ones(size(y)), S_i(1, :)', S_i(3, :)', S_i(4, :)'];
     elseif(flag == 4) % if Cy parameters have to be identified
         y = C_i(2, :)';
-        A = [ones(size(y)), S_i(6, :)', S_i(7, :)', S_i(8, :)', S_i(9, :)', S_i(10, :)'];
+        A = [ones(size(y)), S_i(6, :)', S_i(8, :)', S_i(10, :)'];
     elseif(flag == 5) % if Cl parameters have to be identified
         y = C_i(4, :)';
-        A = [ones(size(y)), S_i(6, :)', S_i(7, :)', S_i(8, :)', S_i(9, :)', S_i(10, :)'];
+        A = [ones(size(y)), S_i(6, :)', S_i(7, :)', S_i(9, :)'];
     elseif(flag == 6) % if Cn parameters have to be identified
         y = C_i(6, :)';
-        A = [ones(size(y)), S_i(6, :)', S_i(7, :)', S_i(8, :)', S_i(9, :)', S_i(10, :)'];
+        A = [ones(size(y)), S_i(6, :)', S_i(8, :)', S_i(10, :)'];
     end
     
 % parameter estimation

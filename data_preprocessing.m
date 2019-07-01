@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Data-preprocessing function
 function [X_r, U_m, Z_m, Q, R,  X_k1_k1_E0, X_std_E0] = data_preprocessing(t, u_n, v_n, w_n, phi, theta, psi, p, q, r, Ax, Ay, Az, vtas, alpha, beta)
 
 
@@ -54,6 +63,7 @@ function [X_r, U_m, Z_m, Q, R,  X_k1_k1_E0, X_std_E0] = data_preprocessing(t, u_
     X_r =  [x';y';z';ur';vr';wr';phi';theta';psi';...
         W_x';W_y';W_z';l_Ax';l_Ay';l_Az';...
         l_p';l_q';l_r']; % Real state
+     
     U_m = [Ax_m'; Ay_m'; Az_m'; p_m'; q_m'; r_m'];  % Measured inputs
     Z_m = [x_m'; y_m'; z_m'; u_m'; v_m'; w_m'; phi_m'; theta_m'; psi_m'; V_m'; alpha_m'; beta_m'];  % Measured states
 end

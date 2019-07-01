@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Jacobian Computation
 function J = jacob(f, x0, u0)
     
     h = 1e-6;

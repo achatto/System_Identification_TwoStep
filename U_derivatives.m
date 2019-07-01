@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% IMU data derivatives
 function [Ued] = U_derivatives(dt, Ue)
     
     Ue_temp = Ue(:, 3:end);

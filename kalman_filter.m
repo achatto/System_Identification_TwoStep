@@ -1,10 +1,13 @@
-function [Xe, Ue, Ze, I, std_Xe, Xe_err, Ze_err] = kalman_filter(X_r, U_m, Z_m, Q, R, X_k1_k1_E0, X_std_E0, dt)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Extended Kalman Filter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
 % 
-% AE4320 Assignment
-% Abhishek Chatterjee (4743075)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Extended Kalman Filter implementation
+function [Xe, Ue, Ze, I, std_Xe, Xe_err, Ze_err] = kalman_filter(X_r, U_m, Z_m, Q, R, X_k1_k1_E0, X_std_E0, dt)
 
 % Initialization
 

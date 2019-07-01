@@ -1,3 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Script to import aircraft parameters
+
 % Aircraft Data
 Ixx = 11187.8;
 Iyy = 22854.8;
@@ -13,7 +23,7 @@ rho = 1.225;
 % Initial Position Values
 x0 = 0;
 y0 = 0;
-z0 = 2000;
+z0 = -2000;
 
 % Wind Amplitudes
 W_x = 10*ones(size(t));
@@ -56,7 +66,7 @@ l_r = pi/180*0.001*ones(size(t));
 % Initial state estimates
 x_E0 = 0;
 y_E0 = 0;
-z_E0 = 2000;
+z_E0 = -2000;
 u_E0 = u_n(1)+10;
 v_E0 = v_n(1)+6;
 w_E0 = w_n(1)+1;
@@ -102,7 +112,7 @@ y_std_E0 = 1;
 z_std_E0 = 1;
 u_std_E0 = 5;
 v_std_E0 = 5;
-w_std_E0 = 5;
+w_std_E0 = 1;
 phi_std_E0 = 1;
 theta_std_E0 = 1;
 psi_std_E0 = 1;

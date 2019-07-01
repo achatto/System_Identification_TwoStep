@@ -1,7 +1,16 @@
-%% Compute derivatives of accelerations and angular rates
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AE 4320 Assignment
+% Aerodynamic Model Identification Using Two Step Approach
+%  
+% Abhishek Chatterjee
+% 4743075
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Ued = zeros(size(Ue));
-function [C_i, C_v] = aero_fm(dt, Ue, Ze, m, rho, Ixx, Iyy, Izz, Ixz, b, S, c, i_idx, v_idx)
+%% Compute Aerodynamic Forces and Moments
+
+
+function [C_i, C_v] = aero_fm(t, dt, Ue, Ze, m, rho, Ixx, Iyy, Izz, Ixz, b, S, c, i_idx, v_idx)
 
 Ue_temp = Ue(:, 3:end);
 Ue_temp = [Ue_temp zeros(size(Ue,1),2)];
@@ -24,4 +33,38 @@ Cn = (Ued(6,:).*Izz + Ue(4,:).*Ue(5,:).*(Iyy - Ixx) + (Ue(5,:).*Ue(6,:) - Ued(4,
 C_i = [Cx(i_idx); Cy(i_idx); Cz(i_idx); Cl(i_idx); Cm(i_idx); Cn(i_idx)];
 C_v = [Cx(v_idx); Cy(v_idx); Cz(v_idx); Cl(v_idx); Cm(v_idx); Cn(v_idx)];
 
+%% Plots
+% figure(1);
+% subplot(3,1,1);
+% plot(t, Cx);
+% xlabel('time (s)');
+% ylabel('C_x');
+% set(gca, 'fontsize', 18);
+% subplot(3,1,2);
+% plot(t, Cy);
+% xlabel('time (s)');
+% ylabel('C_y');
+% set(gca, 'fontsize', 18);
+% subplot(3,1,3);
+% plot(t, Cz);
+% xlabel('time (s)');
+% ylabel('C_y');
+% set(gca, 'fontsize', 18);
+% 
+% figure(2);
+% subplot(3,1,1);
+% plot(t, Cl);
+% xlabel('time (s)');
+% ylabel('C_l');
+% set(gca, 'fontsize', 18);
+% subplot(3,1,2);
+% plot(t, Cm);
+% xlabel('time (s)');
+% ylabel('C_m');
+% set(gca, 'fontsize', 18);
+% subplot(3,1,3);
+% plot(t, Cn);
+% xlabel('time (s)');
+% ylabel('C_n');
+% set(gca, 'fontsize', 18);
 end
